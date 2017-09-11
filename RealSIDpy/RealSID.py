@@ -99,9 +99,9 @@ def playsid(filename, subtune, playseconds, serialport, baudrate):
     else:
         print("Warning: Some songs require the CIA 1 timer (not implemented).")
 
-    print("Title    : {0}".format(data[22:54].decode('ascii', 'replace')))
-    print("Author   : {0}".format(data[54:86].decode('ascii', 'replace')))
-    print("Released : {0}".format(data[86:118].decode('ascii', 'replace')))
+    print("Title    : {0}".format(data[22:54].decode('unicode_escape')))
+    print("Author   : {0}".format(data[54:86].decode('unicode_escape')))
+    print("Released : {0}".format(data[86:118].decode('unicode_escape')))
 
     ## Check load address
     if loadaddress == 0:
